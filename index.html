@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My 5 Pictures</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: #ffe6f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e91e63;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .image-box {
+            width: 250px;
+            height: 250px;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>❤️ my biwi❤️</h1>
+
+    <div class="gallery">
+
+        <div class="image-box">
+            <img src="r.jpeg" alt="Picture 1">
+        </div>
+
+        <div class="image-box">
+            <img src="a.jpeg" alt="Picture 2">
+        </div>
+
+        <div class="image-box">
+            <img src="u.jpeg" alt="Picture 3">
+        </div>
+
+        <div class="image-box">
+            <img src="q.jpeg" alt="Picture 4">
+        </div>
+
+        <div class="image-box">
+            <img src="j.jpeg"atl="picture5"
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>14 Months of Us ❤️</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #120008, #3b0018, #72002f);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Floating Hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff4f91;
+    font-size: 25px;
+    animation: float 7s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main */
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 55px;
+    color: #ff9bc4;
+    text-shadow: 0 0 20px #ff2975;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #ffd5e5;
+    margin-bottom: 40px;
+}
+
+/* Gift Box */
+
+.gift-area {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gift {
+    position: relative;
+    width: 180px;
+    height: 150px;
+    background: linear-gradient(145deg, #ff1f68, #a9003e);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(255, 0, 100, 0.4);
+    transition: 0.5s;
+}
+
+.gift:hover {
+    transform: scale(1.08);
+}
+
+.gift::before {
+    content: "";
+    position: absolute;
+    left: 75px;
+    width: 30px;
+    height: 150px;
+    background: #ffd1df;
+}
+
+.gift-lid {
+    position: absolute;
+    width: 205px;
+    height: 45px;
+    background: #ff397a;
+    left: -12px;
+    top: -35px;
+    border-radius: 8px;
+    transition: 1s;
+    z-index: 3;
+}
+
+.gift-lid::after {
+    content: "🎀";
+    position: absolute;
+    font-size: 45px;
+    left: 76px;
+    top: -32px;
+}
+
+.gift.open .gift-lid {
+    transform: translateY(-100px) rotate(-10deg);
+}
+
+.gift-text {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Surprise */
+
+.surprise {
+    display: none;
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.surprise.show {
+    display: block;
+}
+
+/* Photo */
+
+.photo-box {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff4f91, #ffd1df, #ff4f91);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 50, 130, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-box img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 14px;
+}
+
+.photo-box img.active {
+    display: block;
+}
+
+/* Love Text */
+
+.love-card {
+    margin-top: 35px;
+    padding: 35px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.love-card h2 {
+    color: #ff9fc5;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.love-card p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ffe8f0;
+}
+
+/* Button */
+
+.music-btn {
+    margin-top: 30px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #ff2f73;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff2f73;
+}
+
+.music-btn:hover {
+    background: #ff5b91;
+}
+
+/* Ending */
+
+.end {
+    margin-top: 50px;
+    font-size: 25px;
+    color: #ffb4cf;
+}
+
+.signature {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .love-card {
+        padding: 25px 18px;
+    }
+
+    .love-card p {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+<div class="heart" style="left:15%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:30%; animation-delay:4s;">💗</div>
+<div class="heart" style="left:50%; animation-delay:1s;">❤️</div>
+<div class="heart" style="left:70%; animation-delay:3s;">💖</div>
+<div class="heart" style="left:85%; animation-delay:5s;">💕</div>
+
+<div class="container">
+
+    <h1>14 Months of Us ❤️</h1>
+
+    <p class="subtitle">
+        14 months... countless memories... one beautiful love story. 🥹💕
+    </p>
+
+    <!-- Gift Box -->
+
+    <div class="gift-area">
+
+        <div class="gift" onclick="openGift()" id="gift">
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-text">
+                Open Me ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Surprise Content -->
+
+    <div class="surprise" id="surprise">
+
+        <h2>
+            Surprise! 🥹❤️
+        </h2>
+
+        <!-- SAME PHOTO BOX -->
+
+        <div class="photo-box">
+
+            <img src="a.jpeg" alt="Our Beautiful Memory 1" class="active">
+            <img src="r.jpeg" alt="Our Beautiful Memory 2">
+            <img src="u.jpeg" alt="Our Beautiful Memory 3">
+
+        </div>
+
+        <div class="love-card">
+
+            <h2>14 Months With You ❤️</h2>
+
+            <p>
+
+                Fourteen months ago, something beautiful started.
+                And somehow, every single day since then has become
+                another reason to be thankful for you. ❤️
+
+                <br><br>
+
+                14 months of smiles, late-night conversations,
+                silly fights, unforgettable moments, random jokes,
+                little arguments, endless memories and a kind of
+                happiness that I never want to lose. 🥹💕
+
+                <br><br>
+
+                You have become such a beautiful part of my life.
+                You are not just someone I love;
+                you are someone whose presence makes ordinary days
+                feel special.
+
+                <br><br>
+
+                Thank you for every smile.
+                Thank you for every little effort.
+                Thank you for staying.
+                Thank you for understanding me.
+                Thank you for all the memories we've created together.
+
+                <br><br>
+
+                I hope we keep making memories like these.
+                More laughter.
+                More adventures.
+                More late-night talks.
+                More stupid jokes.
+                More pictures.
+                More celebrations.
+                More "I love yous."
+
+                <br><br>
+
+                And most importantly...
+
+                <br><br>
+
+                <b>
+                More of US. ❤️
+                </b>
+
+                <br><br>
+
+                I don't know what the future has written for us,
+                but I know one thing...
+
+                <br><br>
+
+                I want to keep choosing you,
+                keep loving you,
+                keep annoying you,
+                keep making you smile,
+                and keep creating this beautiful little story
+                with you. 🫶🏻
+
+                <br><br>
+
+                Happy 14 Months to us. ❤️
+
+                <br>
+
+                Here's to everything we've been,
+                everything we are,
+                and everything we're going to become together. 💗
+
+            </p>
+
+        </div>
+
+        <div class="end">
+
+            14 Months Down... ❤️<br>
+            A Lifetime of Memories To Go... ♾️
+
+            <div class="signature">
+                Forever grateful for you. 💕
+            </div>
+
+        </div>
+
+        <!-- Music -->
+
+        <button class="music-btn" onclick="playMusic()">
+            🎵 Play Our Song
+        </button>
+
+        <audio id="music" loop>
+            <source src="Ever Green.mp3.mpeg" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+</div>
+
+<script>
+
+function openGift() {
+
+    const gift = document.getElementById("gift");
+    const surprise = document.getElementById("surprise");
+
+    gift.classList.add("open");
+
+    setTimeout(() => {
+        surprise.classList.add("show");
+
+        surprise.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 900);
+}
+
+
+function playMusic() {
+
+    const music = document.getElementById("music");
+
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+
+}
+
+
+/* Photo rotation */
+
+const photos = document.querySelectorAll(".photo-box img");
+let currentPhoto = 0;
+
+setInterval(() => {
+
+    photos[currentPhoto].classList.remove("active");
+
+    currentPhoto = (currentPhoto + 1) % photos.length;
+
+    photos[currentPhoto].classList.add("active");
+
+}, 3000);
+
+</script>
+
+</body>
+</html>
